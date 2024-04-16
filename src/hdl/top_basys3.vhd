@@ -129,7 +129,6 @@ signal w_floor : std_logic_vector(3 downto 0) := (others => '0');
 
 -- 50 MHz clock
 constant k_clk_period : time := 20 ns;
-
   
 begin
 	-- PORT MAPS ----------------------------------------
@@ -137,7 +136,7 @@ begin
         generic map ( k_DIV => 50000000 ) -- 1 Hz clock from 100 MHz
         port map (                          
             i_clk   => clk,
-            i_reset => btnL or btnU,
+            i_reset => btnL,
             o_clk   => w_clk
         ); 
     sevenSegDecoder_inst : sevenSegDecoder
@@ -156,7 +155,7 @@ begin
         ); 
 	uut_inst : elevator_controller_fsm port map (
             i_clk     => w_clk,
-            i_reset   => btnR or btnL,
+            i_reset   => btnR,
             i_stop    => sw(0),
             i_up_down => sw(1),
             o_floor   => w_floor

@@ -7,6 +7,9 @@ Targeted toward Digilent Basys3. Make sure to install the [board files](https://
 Tested on Windows 11.
 
 ---
+## Documentation
+- Lab Partner: Josh wynn
+  - Was shown code on basys 3 master file on which buttons, clk, switches and segments to uncomment to use for the lab
 
 ## Build the project
 
